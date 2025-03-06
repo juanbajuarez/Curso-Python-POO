@@ -52,7 +52,6 @@ def main()->None:
     """
     grupo_404=["Héctor", "Addi",  "Jesús Alberto","Tania","Patricia", "Rebeca","Jamileth", "Bryan", "Rosalinda","Galilea", "Jennifer", "Juan"]
     genera_par(grupo_404)
-
 if __name__ == '__main__':
     """
     Ejecución del programa principal
