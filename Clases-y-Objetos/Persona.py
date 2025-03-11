@@ -11,13 +11,31 @@ class Persona:
         self.altura=altura
         self.peso=peso
     def caminar(self)->None:
-        print("Estoy caminando.")
+        """
+        Función que despliega la acción de caminar.
+        :return:
+        """
+        print(f"{self.nombre} esta caminando para bajar sus {self.peso}. Kgs")
     def comer(self)->None:
-        print("Estoy comiendo.")
+        """
+        Función que despliega la acción de comer.
+        :return:
+        """
+
+        print(f"{self.nombre} esta comiendo .")
     def jugar(self)->None:
-        print("Estoy jugando.")
+        """
+        Función que despliega la acción de jugar.
+        :return:
+        """
+        print(f"{self.nombre} esta jugando.")
     def dormir(self)->None:
-        print("Estoy durmiendo.")
+        """
+        Función que despliega la acción de dormir.
+        :return:
+        """
+        print(f"{self.nombre} esta durmiendo.")
+
 if __name__ == '__main__':
     juan=Persona("Juan",25,1.78,82.300)
     print(juan.nombre)
@@ -28,3 +46,12 @@ if __name__ == '__main__':
     juan.jugar()
     juan.comer()
     juan.dormir()
+    juan2=Persona("Bautista",22,180,85.520)
+    juan2.caminar()
+    juan2.comer()
+    juan2.jugar()
+    juan2.dormir()
+    juan.peso=80.5
+    juan.altura=1.82
+    juan.caminar()
+    print(juan.nombre)
