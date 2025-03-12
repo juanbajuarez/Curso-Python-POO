@@ -1,7 +1,6 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
 # Descripción: Clases y objetos.
-from symtable import Class
 
 
 class Estudiante:
@@ -25,10 +24,12 @@ class Profesor:
     def dominar_tema(self,tema:str)->list[str]:
         pass
     def esenar_tema(self,no_tema:int)->str:
-        if no_tema>len(self.temas_dominados):
-            return self.temas_dominados[no_tema]
-        else:
+        if no_tema>=len(self.temas_dominados):
+
             return "Fuera de rango"
+        else:
+            return self.temas_dominados[no_tema]
+
 
 if __name__ == '__main__':
     Estudiante1=Estudiante("JUAN")
@@ -37,9 +38,13 @@ if __name__ == '__main__':
     Estudiante2.aprender_tema("Iot")
     print(Estudiante1)
     print(Estudiante2)
-    Profesor1=Profesor("Betho",["Estructura de datos"])
+    Profesor1=Profesor("Betho",["Estructura de datos","Calculo","Paradigmas"])
     Profesor2=Profesor("Magdiel",["Programación estructurada"])
-    Profesor1.esenar_tema(1)
-    Profesor2.esenar_tema(1)
+    print(Profesor1.esenar_tema(2))
+    print(Profesor2.esenar_tema(0))
     print(Profesor1)
     print(Profesor2)
+    tema1=Profesor1.esenar_tema(1)
+    Estudiante1.aprender_tema(tema1)
+    Estudiante2.aprender_tema(tema1)
+    Estudiante2.aprender_tema(Profesor1.esenar_tema(2))

@@ -46,7 +46,7 @@ if __name__ == '__main__':
     juan.jugar()
     juan.comer()
     juan.dormir()
-    juan2=Persona("Bautista",22,180,85.520)
+    juan2=Persona("Bautista",22,1.80,85.520)
     juan2.caminar()
     juan2.comer()
     juan2.jugar()
