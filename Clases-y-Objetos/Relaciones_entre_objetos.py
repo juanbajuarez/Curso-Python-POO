@@ -25,6 +25,9 @@ class Empresa:
     def agregar_empleados(self,*nuevos_empleados:Empleado):
         for empleado in list(nuevos_empleados):
             self.empleados.append(empleado)
+    def eliminar_empleados(self,*nuevos_empleados:Empleado):
+        for empleado in list(nuevos_empleados):
+            self.empleados.remove(empleado)
 
 
 if __name__ == '__main__':
@@ -39,3 +42,8 @@ if __name__ == '__main__':
     print("Programa finalizado")
     print("Adios")
     print("Hola mundo")
+    amazon.eliminar_empleados(ivan)
+    print(amazon)
+    print(juan)
+    juan.nombre="Juan Bautista"
+    print(juan.nombre)
