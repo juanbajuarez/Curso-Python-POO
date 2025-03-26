@@ -16,7 +16,7 @@ class Window:
     def  draw_scoreboard(self)->None:
         print(f"Score:{self.scoreboard.point}")
     def update_score(self,points:int)->None:
-        self.scoreboard.point+=points
+        self.scoreboard._point=points
         print(f"Score:{self.scoreboard.point}")
 
     def __str__(self)->str:

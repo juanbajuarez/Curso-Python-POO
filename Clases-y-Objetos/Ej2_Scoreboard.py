@@ -30,10 +30,9 @@ class Scoreboard:
     @property
     def size(self)->float:
         return self._size
-    @ point.setter
-    def point(self,points=int):
-        points+=1
-        self._point=points
+    @point.setter
+    def point(self,points:int):
+        self._point+=points
 if __name__ == '__main__':
     # Se crean objetos de la clase y se imprime.
     print("  -- Se crean objetos de la clase Scoreboard.")
