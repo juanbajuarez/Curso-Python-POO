@@ -8,20 +8,43 @@ from  Ej2_Scoreboard import Scoreboard
 
 #Declaracion de la clase Window
 class Window:
+    """
+    Clase que contiene a Scorebord.
+    """
     #Constructores de la clase
     def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard()):
+        """
+        Inicializa la instancia.
+        :param text: Título de la ventana.
+        :param width: Ancho de la ventana.
+        :param height: Alto de la ventana.
+        :param scoreboard: Objeto Scoreboard.
+        """
         self.text=text
         self.width=width
         self.height=height
         self.scoreboard=scoreboard
     #Métodos de la clase
     def  draw_scoreboard(self)->None:
+        """
+        Dibuja el scoreboard.
+        :return: None
+        """
         print(f"Score:{self.scoreboard.point}")
     def update_score(self,points:int)->None:
+        """
+        Actualiza la puntuación.
+        :param points: Nueva puntuación para actualizar.
+        :return: None
+        """
         self.scoreboard._point=points
         print(f"Score:{self.scoreboard.point}")
 
     def __str__(self)->str:
+        """
+        Métodos mágicos.
+        :return: Cadena que describe la ventana.
+        """
         return  f"Windows:(Title:{self.text},Width:{self.width},Height:{self.height}.Scoreboard:{self.scoreboard})"
 #Código a nivel de módulo
 if __name__ == "__main__":
