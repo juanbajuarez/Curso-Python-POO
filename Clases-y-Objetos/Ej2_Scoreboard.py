@@ -5,14 +5,15 @@
 
 from typing import Tuple
 
-
+#Declaración de la clase
 class Scoreboard:
+    #Constructor de la clase
     def __init__(self,point:int=0,text_color:tuple[int,int,int]=(0,0,0),font:str="kimono",size:float=48):
         self._point=point
         self._text_color=text_color
         self._font=font
         self._size=size
-
+    #Metodos de la clases
     def draw(self)->None:
         print(f"Score: {self._point}")
 
@@ -33,6 +34,7 @@ class Scoreboard:
     @point.setter
     def point(self,points:int):
         self._point+=points
+#Código a nivél de módulo
 if __name__ == '__main__':
     # Se crean objetos de la clase y se imprime.
     print("  -- Se crean objetos de la clase Scoreboard.")

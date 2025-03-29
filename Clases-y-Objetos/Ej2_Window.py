@@ -3,16 +3,18 @@
 # Descripción: Se necesita desarrollar un sistema que permita
 # gestionar y visualizar un scoreboard (puntuación) dentro de una ventana gráfica.
 
+#Se importa la clase Scoreboard
 from  Ej2_Scoreboard import Scoreboard
 
+#Declaracion de la clase Window
 class Window:
-
+    #Constructores de la clase
     def __init__(self,text:str,width:int,height:int,scoreboard:Scoreboard=Scoreboard()):
         self.text=text
         self.width=width
         self.height=height
         self.scoreboard=scoreboard
-
+    #Métodos de la clase
     def  draw_scoreboard(self)->None:
         print(f"Score:{self.scoreboard.point}")
     def update_score(self,points:int)->None:
@@ -21,7 +23,7 @@ class Window:
 
     def __str__(self)->str:
         return  f"Windows:(Title:{self.text},Width:{self.width},Height:{self.height}.Scoreboard:{self.scoreboard})"
-
+#Código a nivel de módulo
 if __name__ == "__main__":
     # Se crean objetos de la clase Window sin un objeto de la clase Scoreboard creado
     # y se prueban sus métodos.
