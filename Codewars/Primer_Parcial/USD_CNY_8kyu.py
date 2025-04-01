@@ -21,20 +21,10 @@ def usdcny(usd)->str:
     conversion = 6.75
     yuan = conversion * usd
     return f"{yuan:.2f} Chinese Yuan"
+
+#Código a nivel de módulo.
 if __name__ == '__main__':
-    """"
-    Código dado por Codewars.
-    import codewars_test as test
-    from solution import usdcny
-
-
-    @test.describe("USD=>CNY")
-    def test_group():
-        @test.it("Basic test case")
-        def test_case():
-            test.assert_equals(usdcny(15), "101.25 Chinese Yuan")
-            test.assert_equals(usdcny(465), "3138.75 Chinese Yuan")
-    """
+    
     #Mi código para hacer pruebas.
     print(usdcny(15))
     print(usdcny(465))

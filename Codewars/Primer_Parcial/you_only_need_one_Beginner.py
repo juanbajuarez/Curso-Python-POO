@@ -6,38 +6,21 @@
 # Return true if the array contains the value, false if not.
 
 
-def check(seq, elem):
+def check(seq, elem)->bool:
+    """
+    Función que busca un número en una cadena.
+    :param seq: Una secuencia de números.
+    :param elem: Elemento a buscar en la secuencia de números
+    :return: Valor bool que indica si existe o no el elemento en la secuencia.
+    """
     if elem in seq:
         return True
     else:
         return False
 
+#Código a nivel de módulo.
 if __name__ == '__main__':
-    """
-    import codewars_test as test
-from solution import check
 
-@test.describe("Fixed Tests")
-def fixed_tests():
-    @test.it('Basic Test Cases')
-    def basic_test_cases():
-        tests = [
-            (True, ([66, 101], 66)),
-            (False, ([78, 117, 110, 99, 104, 117, 107, 115], 8)),
-            (True, ([101, 45, 75, 105, 99, 107], 107)),
-            (True, ([80, 117, 115, 104, 45, 85, 112, 115], 45)),
-            (True, (['t', 'e', 's', 't'], 'e')),
-            (False, (["what", "a", "great", "kata"], "kat")),
-            (True, ([66, "codewars", 11, "alex loves pushups"], "alex loves pushups")),
-            (False, (["come", "on", 110, "2500", 10, '!', 7, 15], "Come")),
-            (True, (["when's", "the", "next", "Katathon?", 9, 7], "Katathon?")),
-            (False, ([8, 7, 5, "bored", "of", "writing", "tests", 115], 45)),
-            (True, (["anyone", "want", "to", "hire", "me?"], "me?")),
-        ]
-        
-        for exp, inp in tests:
-            test.assert_equals(check(*inp), exp)
-    """
     # Mi código para hacer pruebas.
     print(check([66, 101], 66))
     print(check([78, 117, 110, 99, 104, 117, 107, 115], 8))

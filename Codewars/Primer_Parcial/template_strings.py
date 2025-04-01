@@ -11,25 +11,16 @@
 
 def temple_strings(obj, feature)->str:
     """
-
+    Función que concatena dos palabra agregando are entre ellas.
     :param obj:Primer parte de la cadena
     :param feature: Segunda parte de la cadena.
     :return: Cadena concatenada agregando él are
     """
     return f'{obj} are {feature}'
+
+#Código a nivel de módulo.
 if __name__ == '__main__':
-    """
-    Código dado por Codewars.
-    import codewars_test as test
-    from solution import temple_strings
-    
-    @test.describe('Example Tests')
-    def example_tests():
-        test.assert_equals(temple_strings("Animals","Good"), 'Animals are Good')
-        test.assert_equals(temple_strings("Animals","Good"), 'Animals are Good')
-        test.assert_equals(temple_strings("You","Special"), 'You are Special')
-        test.assert_equals(temple_strings("lives","frozen"), 'lives are frozen')
-    """
+
     # Mi código para hacer pruebas.
     print(temple_strings("lives","frozen"))
     print(temple_strings("Animals","Good"))

@@ -20,3 +20,6 @@ class Torneo:
         pass
     def __str__(self)->str:
         return f"Torne:(Nombre:{self._nombre}, Equipos:{self._equipos})"
+if __name__ == '__main__':
+    lista
+    liga1=Torneo("Unsij")

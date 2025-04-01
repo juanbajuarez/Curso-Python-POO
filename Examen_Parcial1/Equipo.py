@@ -8,7 +8,7 @@ from Jugador import Jugador
 
 class Equipo:
     id=1
-    def __init__(self,nombre:str,jugadores:list[Jugador]):
+    def __init__(self,nombre:str,jugadores:tuple[Jugador]):
         self._nombre=nombre
         self._jugadores=jugadores
         self._id_equipo=Equipo.id
@@ -37,5 +37,5 @@ if __name__ == '__main__':
     print(lista)
     cefor=Equipo("Cefors",lista)
     print(cefor)
-    atom = Equipo("Atom", lista)
+    atom = Equipo("Atom", ivan)
     print(atom)
