@@ -9,7 +9,7 @@ class Personaje:
         """
         Inicialización del constructor de la clase personaje
         :param x: posición inicial en x
-        :param y: posición inicial en x
+        :param y: posición inicial en y
         """
         self.posx=x
         self.posy=y

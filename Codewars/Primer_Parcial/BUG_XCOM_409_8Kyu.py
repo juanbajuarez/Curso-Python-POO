@@ -1,5 +1,5 @@
 # Autor: Juan Bautista Juárez
-# Fecha: Marzo de 2025
+# Fecha: 17 de Marzo de 2025
 # Descripción: You are an intern working in the software development department of the X-COM agency, responsible
 # for fighting off a large-scale invasion of extraterrestrials. Your task for today is described with the bug report below:
 # Pilots have reported discrepancies in their flight logs after returning from interception missions. The travel distance
