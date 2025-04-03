@@ -2,40 +2,41 @@
 # Fecha: Marzo de 2025
 # Descripción: Examen Primer parcial
 # Equipo
-from typing import Tuple
 
 from Jugador import Jugador
 
 class Equipo:
     id=1
-    def __init__(self,nombre:str,jugadores:tuple[Jugador]):
+    def __init__(self,nombre:str,*jugadores:tuple[Jugador]):
         self._nombre=nombre
-        self._jugadores=jugadores
+        self._jugadores=list(jugadores)
         self._id_equipo=Equipo.id
         Equipo.id+=1
-    def agregar_jugadores(self,*jugadores:Tuple[Jugador])->None:
-        pass
-    def remover_jugadores(self,*jugadores:Tuple[Jugador])->None:
-        pass
+
+    def agregar_jugadores(self,*jugadores:tuple[Jugador])->None:
+        self._jugadores.extend(jugadores)
+
+    def remover_jugadores(self,*jugadores:tuple[Jugador])->None:
+        for jugador in jugadores:
+            if jugador in self._jugadores:
+                self._jugadores.remove(jugador)
+
     def mostrar_jugadores(self)->None:
-        pass
-    def total_goles(self)->None:
-        pass
+        if self._jugadores:
+            for jugador in self._jugadores:
+                print(jugador)
+        else:
+            print("No hay jugadores en el equipo.")
+    def total_goles(self)->int:
+        return sum(jugador.goles for jugador in self._jugadores)
+
     def __str__(self):
-        return f"Equipo({self._nombre}{self._jugadores}{self._id_equipo})"
+        if self._jugadores:
+            cadena_jugadores = ", ".join(str(jugador) for jugador in self._jugadores)#Solución consultada en un foro
+            return f"Equipo:({self._nombre}, Jugadores: [{cadena_jugadores}], Id: {self._id_equipo})"
+        else:
+            return f"Equipo:({self._nombre},Jugadores: [Sin jugadores],Id: {self._id_equipo})"
+
 
 if __name__ == '__main__':
-    juan = Jugador("Juan", 5)
-    ivan = Jugador("Ivan", 5)
-    luis = Jugador("luis", 5)
-    guille = Jugador("guille", 5)
-    lista=[]
-    lista.append(juan._nombre)
-    lista.append(ivan._nombre)
-    lista.append(luis._nombre)
-    lista.append(guille._nombre)
-    print(lista)
-    cefor=Equipo("Cefors",lista)
-    print(cefor)
-    atom = Equipo("Atom", ivan)
-    print(atom)
+    pass
