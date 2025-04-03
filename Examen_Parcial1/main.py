@@ -1,7 +1,7 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
 # Descripción: Examen Primer parcial
-# Menú principal
+# Menú principal.
 from torneo import Torneo
 from Equipo import Equipo
 from Jugador import Jugador

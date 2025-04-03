@@ -1,7 +1,7 @@
 # Autor: Juan Bautista Juárez
 # Fecha: Marzo de 2025
 # Descripción: Examen Primer parcial
-# Torneo
+# Torneo.
 from typing import Tuple
 
 from Equipo import Equipo
