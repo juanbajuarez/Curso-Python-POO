@@ -8,6 +8,10 @@ from Jugador import Jugador
 
 
 def menu():
+    """
+    Función que despliega el menú.
+    :return: La opción del menú.
+    """
     while True:
         print("1. Crear jugador")
         print("2. Crear equipo")
@@ -28,6 +32,7 @@ def menu():
         else:
             print("Opción no válida. Intente de nuevo.")
 
+# Código a nivel de módulo
 if __name__ == '__main__':
     jugadores = []
     equipos = []
@@ -207,8 +212,8 @@ if __name__ == '__main__':
                     print("No se agregaron equipos al torneo.")
             else:
                 print("No hay equipos para agregar al torneo.")
-            #Datos del torneo
 
+            #Datos del torneo para pruebas
             print(torneo)
 
         elif opcion==8:
@@ -249,7 +254,7 @@ if __name__ == '__main__':
             else:
                 print("No hay equipos en el torneo para eliminar.")
 
-            # Datos del torneo
+            # Datos del torneo para pruebas
             print(torneo)
 
         elif opcion == 9:
@@ -257,7 +262,7 @@ if __name__ == '__main__':
             if len(jugadores)!=0:
                 for i, jugador in enumerate(jugadores):
                     print(f"{i + 1}. {jugador.nombre}")
-                jugador_goles = input("Ingrese el nombre del jugador: ").strip()
+                jugador_goles = input("Ingrese el nombre del jugador: ").strip()#Borra espacios
                 for jugador in jugadores:
                     if jugador.nombre.lower() == jugador_goles.lower():
                         while True:

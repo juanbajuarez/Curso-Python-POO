@@ -8,24 +8,53 @@ from Equipo import Equipo
 from Jugador import Jugador
 
 class Torneo:
+    """
+    Declaración de la clase Torneo
+    """
     def __init__(self,nombre:str,*equipos:tuple[Equipo]):
+        """
+        Inciación del constructor
+        :param nombre: Nombre del torneo
+        :param equipos: Nombre de los equipos
+        """
         self._nombre=nombre
         self._equipos=list(equipos)
 
     def agregar_equipos(self,*equipos:tuple[Equipo])->None:
+        """
+        Métod0 para agregar equipos al torneo.
+        :param equipos: NOmbre de los equipos que se agragaran.
+        :return: None
+        """
+        #En Python, extend() es una función que permite extender una
+        # lista con los elementos de otra lista, tupla, cadena,
+        # conjunto, etc.
         self._equipos.extend(equipos)
 
     def eliminar_equipos(self,*equipos:tuple[Equipo])->None:
+        """
+        Métod0 para eliminar equipos del torneo.
+        :param equipos: Nombre de los equipos a eliminar
+        :return: None
+        """
         for equipo in equipos:
             if equipo in self._equipos:
                 self._equipos.remove(equipo)
     def mostrar_equipo(self)->None:
+        """
+        Métod0 que muestra los equipos del torneo.
+        :return: None
+        """
         if self._equipos:
             for equipo in self._equipos:
                 print(equipo)
         else:
             print("No hay equipos en el torneo.")
     def generar_rol(self,)->None:
+        """
+        Métod0 que genera el rol de juegos.
+        :return: None
+        """
         if len(self._equipos) < 2:
             print("El torneo necesita al menos dos equipos para generar el rol.")
             return
@@ -53,8 +82,12 @@ class Torneo:
             for partido in partidos_jornada:
                 print(f"{partido[0]} vs {partido[1]}")
     def __str__(self)->str:
+        """
+        Métod0 magico
+        :return:Cadena con los atributos de la clase Torneo.
+        """
         equipos_nombres = ", ".join([equipo._nombre for equipo in self._equipos])
         return f"Torneo({self._nombre}, Equipos:{equipos_nombres})"
-
+#Código a nivel de módulo.
 if __name__ == '__main__':
     pass
