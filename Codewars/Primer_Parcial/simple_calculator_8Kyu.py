@@ -1,5 +1,5 @@
 # Autor: Juan Bautista Juárez
-# Fecha: Marzo de 2025
+# Fecha: 22 de Marzo de 2025
 # Descripción:You are required to create a simple calculator that returns the result of
 # addition, subtraction, multiplication or division of two numbers.
 # Your function will accept three arguments:

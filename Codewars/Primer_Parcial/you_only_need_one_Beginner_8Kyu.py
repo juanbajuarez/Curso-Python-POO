@@ -1,5 +1,5 @@
 # Autor: Juan Bautista Juárez
-# Fecha: Marzo de 2025
+# Fecha: 27 de Marzo de 2025
 # Descripción: You will be given an array a and a value x.
 # All you need to do is check whether the provided array contains the value.
 # a can contain numbers or strings. x can be either.

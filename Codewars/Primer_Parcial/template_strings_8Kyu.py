@@ -1,5 +1,5 @@
 # Autor: Juan Bautista Juárez
-# Fecha: Marzo de 2025
+# Fecha: 23 de Marzo de 2025
 # Descripción: Template Strings, this kata is mainly aimed at the new JS ES6 Update introducing Template Strings
 # Task
 # Your task is to return the correct string using the Template String Feature.
